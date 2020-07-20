@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ShopNow.swift
 //  MidStateClothing
 //
 //  Created by Asim Brown on 7/20/20.
@@ -8,16 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ShopNow: View {
     var body: some View {
-        Image("MS_LandingPage2")
-        .resizable()
-        .edgesIgnoringSafeArea(.all)
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ShopNow_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ShopNow()
     }
 }

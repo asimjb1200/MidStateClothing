@@ -13,6 +13,7 @@
 		683DF58224C61596009F8D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683DF58124C61596009F8D71 /* Assets.xcassets */; };
 		683DF58524C61596009F8D71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683DF58424C61596009F8D71 /* Preview Assets.xcassets */; };
 		683DF58824C61596009F8D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683DF58624C61596009F8D71 /* LaunchScreen.storyboard */; };
+		683DF59124C61DC3009F8D71 /* ShopNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DF59024C61DC3009F8D71 /* ShopNow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		683DF58424C61596009F8D71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		683DF58724C61596009F8D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		683DF58924C61596009F8D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		683DF59024C61DC3009F8D71 /* ShopNow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopNow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,8 @@
 		683DF57A24C61595009F8D71 /* MidStateClothing */ = {
 			isa = PBXGroup;
 			children = (
+				683DF59324C61F01009F8D71 /* Models */,
+				683DF59224C61EE2009F8D71 /* Views */,
 				683DF57B24C61595009F8D71 /* AppDelegate.swift */,
 				683DF57D24C61595009F8D71 /* SceneDelegate.swift */,
 				683DF57F24C61595009F8D71 /* ContentView.swift */,
@@ -73,6 +77,29 @@
 				683DF58424C61596009F8D71 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		683DF58F24C61D12009F8D71 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				683DF59024C61DC3009F8D71 /* ShopNow.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		683DF59224C61EE2009F8D71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				683DF58F24C61D12009F8D71 /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		683DF59324C61F01009F8D71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +175,7 @@
 			files = (
 				683DF57C24C61595009F8D71 /* AppDelegate.swift in Sources */,
 				683DF57E24C61595009F8D71 /* SceneDelegate.swift in Sources */,
+				683DF59124C61DC3009F8D71 /* ShopNow.swift in Sources */,
 				683DF58024C61595009F8D71 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
