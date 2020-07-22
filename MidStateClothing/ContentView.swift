@@ -9,10 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    // grab the user from the environment
+    @EnvironmentObject var userInfo: UserInfo
+    
+    
     var body: some View {
-        Image("MS_LandingPage2")
-        .resizable()
-        .edgesIgnoringSafeArea(.all)
+        Group {
+            if userInfo.isAuthed == .undefined {
+                Text("Loading...")
+            } else if userInfo.isAuthed == .signedOut {
+                LoginView()
+            } else {
+                HomeView()
+            }
+        }
+        // this runs as soon as content view appears
+        .onAppear {
+            // change the isAuthed in user from undefined to signed out
+            self.userInfo.configureFirebaseStateDidChange()
+        }
     }
 }
 
