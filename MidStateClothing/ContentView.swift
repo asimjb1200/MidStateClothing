@@ -12,7 +12,6 @@ struct ContentView: View {
     // grab the user from the environment
     @EnvironmentObject var userInfo: UserInfo
     
-    
     var body: some View {
         Group {
             if userInfo.isAuthed == .undefined {

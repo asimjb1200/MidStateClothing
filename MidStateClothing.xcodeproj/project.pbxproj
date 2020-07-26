@@ -27,6 +27,7 @@
 		68F95FA424C8C2D900C75DF1 /* FBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95FA024C8C2D900C75DF1 /* FBUser.swift */; };
 		68F95FA724C8C2FC00C75DF1 /* FBAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95FA524C8C2FC00C75DF1 /* FBAuth.swift */; };
 		68F95FA824C8C2FC00C75DF1 /* FBAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95FA624C8C2FC00C75DF1 /* FBAuthError.swift */; };
+		68FD8B2B24CD065A00D765D1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FD8B2A24CD065A00D765D1 /* SplashScreen.swift */; };
 		9BED08913F287A9CC7E522B7 /* Pods_MidStateClothing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B920FEC98C5FC3901FF05795 /* Pods_MidStateClothing.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		68F95FA024C8C2D900C75DF1 /* FBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBUser.swift; sourceTree = "<group>"; };
 		68F95FA524C8C2FC00C75DF1 /* FBAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAuth.swift; sourceTree = "<group>"; };
 		68F95FA624C8C2FC00C75DF1 /* FBAuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAuthError.swift; sourceTree = "<group>"; };
+		68FD8B2A24CD065A00D765D1 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		A29850E40DB5B09FEBD1410B /* Pods-MidStateClothing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidStateClothing.release.xcconfig"; path = "Target Support Files/Pods-MidStateClothing/Pods-MidStateClothing.release.xcconfig"; sourceTree = "<group>"; };
 		B920FEC98C5FC3901FF05795 /* Pods_MidStateClothing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MidStateClothing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,7 +131,6 @@
 			children = (
 				68DE76FA24C8959400E95061 /* Firebase */,
 				683DF58F24C61D12009F8D71 /* Buttons */,
-				68DE76EE24C87BCD00E95061 /* HomeView.swift */,
 			);
 			path = LoginStuff;
 			sourceTree = "<group>";
@@ -167,6 +168,8 @@
 				68F95F9424C8A3C100C75DF1 /* ForgotPasswordView.swift */,
 				6871452224C7F477007343E4 /* LoginView.swift */,
 				68F95F9124C8A09100C75DF1 /* SignInWithEmailView.swift */,
+				68DE76EE24C87BCD00E95061 /* HomeView.swift */,
+				68FD8B2A24CD065A00D765D1 /* SplashScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				683DF57E24C61595009F8D71 /* SceneDelegate.swift in Sources */,
 				6871452024C7E916007343E4 /* UserInfo.swift in Sources */,
 				68F95F9224C8A09100C75DF1 /* SignInWithEmailView.swift in Sources */,
+				68FD8B2B24CD065A00D765D1 /* SplashScreen.swift in Sources */,
 				68F95F9724C8A3CE00C75DF1 /* SignUpView.swift in Sources */,
 				683DF58024C61595009F8D71 /* ContentView.swift in Sources */,
 				68F95F9524C8A3C100C75DF1 /* ForgotPasswordView.swift in Sources */,

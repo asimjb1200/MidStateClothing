@@ -12,6 +12,9 @@ struct SignInWithEmailView: View {
     @EnvironmentObject var userInfo: UserInfo
     @State var user: UserViewModel = UserViewModel()
     
+    @State private var showAlert = false
+    @State private var authError: EmailAuthError?
+    
     // these two come from LoginView
     @Binding var showSheet: Bool
     @Binding var action:LoginView.Action?
@@ -34,7 +37,15 @@ struct SignInWithEmailView: View {
             
             VStack(spacing: 10) {
                 Button(action: {
-                    // Sign In Action
+                    FBAuth.authenticate(withEmail: self.user.email, password: self.user.password) { (result) in
+                        switch result {
+                        case .failure(let error):
+                            self.authError = error
+                            self.showAlert = true
+                        case .success( _):
+                            print("Signed In")
+                        }
+                    }
                 }) {
                     Text("Login")
                         .padding(.vertical, 15)
@@ -56,6 +67,16 @@ struct SignInWithEmailView: View {
                         .cornerRadius(8)
                         .foregroundColor(.white)
                 }
+            }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Login Error"), message: Text(self.authError?.localizedDescription ?? "Unknown Error"), dismissButton: .default(Text("OK")) {
+                    if self.authError == .incorrectPassword {
+                        self.user.password = ""
+                    } else {
+                        self.user.password = ""
+                        self.user.email = ""
+                    }
+                    })
             }
         }
         .padding(.top, 100)
