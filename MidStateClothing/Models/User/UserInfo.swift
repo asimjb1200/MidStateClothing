@@ -23,11 +23,17 @@ class UserInfo: ObservableObject {
     var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle?
     
     func configureFirebaseStateDidChange() {
+        // this listener will observe for the life of the app, when isAuthed is changed it will refresh views using it
         authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener({ (_, user) in
+            // check if the user exists
+            print("Auth State Event")
             guard let _ = user else {
-                self.isAuthed = .signedOut
+                print("Auth State Event: no user")
+                self.isAuthed = .signedOut // if no user, must be signed out
                 return
             }
+            print("Auth State Event: User Found")
+
             self.isAuthed = .signedIn
 //            FBFirestore.retrieveFBUser(uid: user.uid) { (result) in
 //                switch result {

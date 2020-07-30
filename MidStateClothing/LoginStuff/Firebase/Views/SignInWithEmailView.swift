@@ -7,9 +7,11 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 struct SignInWithEmailView: View {
     @EnvironmentObject var userInfo: UserInfo
+    
     @State var user: UserViewModel = UserViewModel()
     
     @State private var showAlert = false
@@ -37,6 +39,7 @@ struct SignInWithEmailView: View {
             
             VStack(spacing: 10) {
                 Button(action: {
+                    // create an authed user
                     FBAuth.authenticate(withEmail: self.user.email, password: self.user.password) { (result) in
                         switch result {
                         case .failure(let error):
@@ -55,6 +58,19 @@ struct SignInWithEmailView: View {
                         .foregroundColor(.white)
                         .opacity(user.isLogInComplete ? 1 : 0.75)
                 }.disabled(!user.isLogInComplete)
+                
+                Button(action: {
+                    
+//                    GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
+                    GIDSignIn.sharedInstance().signIn()
+                }) {
+                    Text("Sign In With Google")
+                    .padding(.vertical, 15)
+                    .frame(width: 200)
+                    .background(Color.blue)
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
+                }
                 
                 Button(action: {
                     self.action = .signUp
