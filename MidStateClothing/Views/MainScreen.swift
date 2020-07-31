@@ -16,14 +16,13 @@ struct MainScreen: View {
     var body: some View {
         VStack {
             ForEach(categoryArray, id: \.self) { category in
-                
                 MainCategories(category: category.name, photo: category.photo)
             }
     }
     }
 }
 
-class CategoryHolder {
+struct CategoryHolder: Hashable {
     var name: String!
     var photo: String!
 

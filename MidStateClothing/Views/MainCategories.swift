@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct HomeScreen: View {
+struct MainCategories: View {
     var category: String = ""
     var photo: String = ""
     
@@ -42,8 +42,8 @@ struct HomeScreen: View {
     }
 }
 
-struct HomeScreen_Previews: PreviewProvider {
+struct MainCategories_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen(category: "Women", photo: "stockModel")
+        MainCategories(category: "Women", photo: "stockModel")
     }
 }
