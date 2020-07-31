@@ -17,24 +17,24 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             Group {
-            if googleDelegate.signedIn {
-                Text("Logged in as \(GIDSignIn.sharedInstance().currentUser!.profile.name)")
-                .navigationBarTitle("MidState Clothing")
-                    .navigationBarItems(trailing: Button(action: {
-                            GIDSignIn.sharedInstance().signOut()
-                        self.googleDelegate.signedIn = false
-                        }) {
-                            Text("Sign Out")
+                if googleDelegate.signedIn {
+                    Text("Logged in as \(GIDSignIn.sharedInstance().currentUser!.profile.name)")
+                    .navigationBarTitle("MidState Clothing")
+                        .navigationBarItems(trailing: Button(action: {
+                                GIDSignIn.sharedInstance().signOut()
+                            self.googleDelegate.signedIn = false
+                            }) {
+                                Text("Sign Out")
+                            })
+                } else {
+                    Text("Logged in as \(userInfo.user.name)")
+                    .navigationBarTitle("MidState Clothing")
+                        .navigationBarItems(trailing: Button("Log Out") {
+                            FBAuth.logout { (result) in
+                                print("Logged Out")
+                            }
                         })
-            } else {
-                Text("Logged in as \(userInfo.user.name)")
-                .navigationBarTitle("MidState Clothing")
-                    .navigationBarItems(trailing: Button("Log Out") {
-                        FBAuth.logout { (result) in
-                            print("Logged Out")
-                        }
-                    })
-            }
+                }
             }
 
 // MARK: Retrieve User From Firebase

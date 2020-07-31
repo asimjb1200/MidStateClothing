@@ -16,12 +16,15 @@
 		6871452024C7E916007343E4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6871451F24C7E916007343E4 /* UserInfo.swift */; };
 		6871452324C7F477007343E4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6871452224C7F477007343E4 /* LoginView.swift */; };
 		68887C7D24D31DE200B808BF /* GoogleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68887C7C24D31DE200B808BF /* GoogleSignInDelegate.swift */; };
+		68887C8124D3283B00B808BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68887C8024D3283B00B808BF /* GoogleService-Info.plist */; };
+		68887C8324D3284C00B808BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68887C8224D3284C00B808BF /* GoogleService-Info.plist */; };
+		68D13EB124D3C34D0057C59B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13EB024D3C34D0057C59B /* MainScreen.swift */; };
+		68D13EB224D3C3E30057C59B /* MainCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13EAE24D3C3420057C59B /* MainCategories.swift */; };
 		68DE76EF24C87BCD00E95061 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DE76EE24C87BCD00E95061 /* HomeView.swift */; };
 		68F95F9224C8A09100C75DF1 /* SignInWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9124C8A09100C75DF1 /* SignInWithEmailView.swift */; };
 		68F95F9324C8A13600C75DF1 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DE76FE24C895E000E95061 /* UserViewModel.swift */; };
 		68F95F9524C8A3C100C75DF1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9424C8A3C100C75DF1 /* ForgotPasswordView.swift */; };
 		68F95F9724C8A3CE00C75DF1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9624C8A3CE00C75DF1 /* SignUpView.swift */; };
-		68F95F9C24C8BE1400C75DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68F95F9B24C8BE1400C75DF1 /* GoogleService-Info.plist */; };
 		68F95FA124C8C2D900C75DF1 /* FBFireStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9D24C8C2D600C75DF1 /* FBFireStoreError.swift */; };
 		68F95FA224C8C2D900C75DF1 /* FBFireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9E24C8C2D700C75DF1 /* FBFireStore.swift */; };
 		68F95FA324C8C2D900C75DF1 /* FBKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9F24C8C2D800C75DF1 /* FBKeys.swift */; };
@@ -46,6 +49,10 @@
 		6871451F24C7E916007343E4 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		6871452224C7F477007343E4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		68887C7C24D31DE200B808BF /* GoogleSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInDelegate.swift; sourceTree = "<group>"; };
+		68887C8024D3283B00B808BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		68887C8224D3284C00B808BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		68D13EAE24D3C3420057C59B /* MainCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategories.swift; sourceTree = "<group>"; };
+		68D13EB024D3C34D0057C59B /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		68DE76EE24C87BCD00E95061 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		68DE76F624C8950A00E95061 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordView.swift; path = "../../../../../../../LoginView_Part_1 2/ForgotPasswordView.swift"; sourceTree = "<group>"; };
 		68DE76FE24C895E000E95061 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -53,7 +60,6 @@
 		68F95F9424C8A3C100C75DF1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		68F95F9624C8A3CE00C75DF1 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		68F95F9A24C8B98400C75DF1 /* MidStateClothing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MidStateClothing.entitlements; sourceTree = "<group>"; };
-		68F95F9B24C8BE1400C75DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		68F95F9D24C8C2D600C75DF1 /* FBFireStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFireStoreError.swift; sourceTree = "<group>"; };
 		68F95F9E24C8C2D700C75DF1 /* FBFireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFireStore.swift; sourceTree = "<group>"; };
 		68F95F9F24C8C2D800C75DF1 /* FBKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBKeys.swift; sourceTree = "<group>"; };
@@ -110,7 +116,8 @@
 				683DF58124C61596009F8D71 /* Assets.xcassets */,
 				683DF58624C61596009F8D71 /* LaunchScreen.storyboard */,
 				683DF58924C61596009F8D71 /* Info.plist */,
-				68F95F9B24C8BE1400C75DF1 /* GoogleService-Info.plist */,
+				68887C8024D3283B00B808BF /* GoogleService-Info.plist */,
+				68887C8224D3284C00B808BF /* GoogleService-Info.plist */,
 				683DF58324C61596009F8D71 /* Preview Content */,
 			);
 			path = MidStateClothing;
@@ -161,6 +168,8 @@
 		68887C7A24D3098500B808BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				68D13EB024D3C34D0057C59B /* MainScreen.swift */,
+				68D13EAE24D3C3420057C59B /* MainCategories.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,7 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				683DF58824C61596009F8D71 /* LaunchScreen.storyboard in Resources */,
-				68F95F9C24C8BE1400C75DF1 /* GoogleService-Info.plist in Resources */,
+				68887C8124D3283B00B808BF /* GoogleService-Info.plist in Resources */,
+				68887C8324D3284C00B808BF /* GoogleService-Info.plist in Resources */,
 				683DF58524C61596009F8D71 /* Preview Assets.xcassets in Resources */,
 				683DF58224C61596009F8D71 /* Assets.xcassets in Resources */,
 			);
@@ -374,7 +384,9 @@
 				68F95F9324C8A13600C75DF1 /* UserViewModel.swift in Sources */,
 				68FD8B2D24CE32D700D765D1 /* SignInWithGoogle.swift in Sources */,
 				68F95FA224C8C2D900C75DF1 /* FBFireStore.swift in Sources */,
+				68D13EB224D3C3E30057C59B /* MainCategories.swift in Sources */,
 				683DF57C24C61595009F8D71 /* AppDelegate.swift in Sources */,
+				68D13EB124D3C34D0057C59B /* MainScreen.swift in Sources */,
 				68887C7D24D31DE200B808BF /* GoogleSignInDelegate.swift in Sources */,
 				683DF57E24C61595009F8D71 /* SceneDelegate.swift in Sources */,
 				6871452024C7E916007343E4 /* UserInfo.swift in Sources */,
