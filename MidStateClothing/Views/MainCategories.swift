@@ -19,10 +19,10 @@ struct MainCategories: View {
     var body: some View {
        ZStack {
         Image(self.photo)
+                .renderingMode(.original)
                 .resizable()
                 .scaledToFit()
                 .frame(width: UIScreen.main.bounds.width, height: 200)
-            .padding(.vertical, 10)
         
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                 Text(self.category)

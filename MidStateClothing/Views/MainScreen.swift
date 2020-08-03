@@ -14,17 +14,31 @@ struct MainScreen: View {
     
     
     var body: some View {
-        VStack {
-            ForEach(categoryArray, id: \.self) { category in
-                MainCategories(category: category.name, photo: category.photo)
+        NavigationView {
+            VStack(spacing: 10) {
+                ForEach(categoryArray, id: \.self) { category in
+                    NavigationLink(destination: ResultView(choice: category.name)) {
+                        MainCategories(category: category.name, photo: category.photo)
+                    }
+                }
             }
+            .navigationBarTitle("Mid$tate Clothing")
+        }
     }
+}
+
+struct ResultView: View {
+    var choice: String
+    
+    var body: some View {
+        Text("You chose \(choice)")
     }
 }
 
 struct CategoryHolder: Hashable {
     var name: String!
     var photo: String!
+    let clothingTypes = ["Tops", "Bottoms"]
 
     init(name:String, photo:String) {
         self.name = name
