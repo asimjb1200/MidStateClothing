@@ -13,25 +13,13 @@
 		683DF58224C61596009F8D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683DF58124C61596009F8D71 /* Assets.xcassets */; };
 		683DF58524C61596009F8D71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683DF58424C61596009F8D71 /* Preview Assets.xcassets */; };
 		683DF58824C61596009F8D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683DF58624C61596009F8D71 /* LaunchScreen.storyboard */; };
-		6871452024C7E916007343E4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6871451F24C7E916007343E4 /* UserInfo.swift */; };
-		6871452324C7F477007343E4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6871452224C7F477007343E4 /* LoginView.swift */; };
-		68887C7D24D31DE200B808BF /* GoogleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68887C7C24D31DE200B808BF /* GoogleSignInDelegate.swift */; };
-		68887C8124D3283B00B808BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68887C8024D3283B00B808BF /* GoogleService-Info.plist */; };
+		6843533424FAFC7F00FF3970 /* GetProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843533324FAFC7F00FF3970 /* GetProductData.swift */; };
+		6843533724FB028700FF3970 /* StripeProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843533624FB028700FF3970 /* StripeProduct.swift */; };
+		6850201424F4AF82008B476B /* MenCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850201324F4AF82008B476B /* MenCategories.swift */; };
+		6850201624F4AFB5008B476B /* WomenCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850201524F4AFB5008B476B /* WomenCategories.swift */; };
+		686E1E5724F75C5700948EA5 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E1E5624F75C5700948EA5 /* ProductView.swift */; };
 		68D13EB124D3C34D0057C59B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13EB024D3C34D0057C59B /* MainScreen.swift */; };
 		68D13EB224D3C3E30057C59B /* MainCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13EAE24D3C3420057C59B /* MainCategories.swift */; };
-		68DE76EF24C87BCD00E95061 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DE76EE24C87BCD00E95061 /* HomeView.swift */; };
-		68F95F9224C8A09100C75DF1 /* SignInWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9124C8A09100C75DF1 /* SignInWithEmailView.swift */; };
-		68F95F9324C8A13600C75DF1 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DE76FE24C895E000E95061 /* UserViewModel.swift */; };
-		68F95F9524C8A3C100C75DF1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9424C8A3C100C75DF1 /* ForgotPasswordView.swift */; };
-		68F95F9724C8A3CE00C75DF1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9624C8A3CE00C75DF1 /* SignUpView.swift */; };
-		68F95FA124C8C2D900C75DF1 /* FBFireStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9D24C8C2D600C75DF1 /* FBFireStoreError.swift */; };
-		68F95FA224C8C2D900C75DF1 /* FBFireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9E24C8C2D700C75DF1 /* FBFireStore.swift */; };
-		68F95FA324C8C2D900C75DF1 /* FBKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95F9F24C8C2D800C75DF1 /* FBKeys.swift */; };
-		68F95FA424C8C2D900C75DF1 /* FBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95FA024C8C2D900C75DF1 /* FBUser.swift */; };
-		68F95FA724C8C2FC00C75DF1 /* FBAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95FA524C8C2FC00C75DF1 /* FBAuth.swift */; };
-		68F95FA824C8C2FC00C75DF1 /* FBAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F95FA624C8C2FC00C75DF1 /* FBAuthError.swift */; };
-		68FD8B2B24CD065A00D765D1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FD8B2A24CD065A00D765D1 /* SplashScreen.swift */; };
-		68FD8B2D24CE32D700D765D1 /* SignInWithGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FD8B2C24CE32D700D765D1 /* SignInWithGoogle.swift */; };
 		9BED08913F287A9CC7E522B7 /* Pods_MidStateClothing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B920FEC98C5FC3901FF05795 /* Pods_MidStateClothing.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,27 +33,14 @@
 		683DF58424C61596009F8D71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		683DF58724C61596009F8D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		683DF58924C61596009F8D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6871451F24C7E916007343E4 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		6871452224C7F477007343E4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		68887C7C24D31DE200B808BF /* GoogleSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInDelegate.swift; sourceTree = "<group>"; };
-		68887C8024D3283B00B808BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6843533324FAFC7F00FF3970 /* GetProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductData.swift; sourceTree = "<group>"; };
+		6843533624FB028700FF3970 /* StripeProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeProduct.swift; sourceTree = "<group>"; };
+		6850201324F4AF82008B476B /* MenCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenCategories.swift; sourceTree = "<group>"; };
+		6850201524F4AFB5008B476B /* WomenCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCategories.swift; sourceTree = "<group>"; };
+		686E1E5624F75C5700948EA5 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		68D13EAE24D3C3420057C59B /* MainCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategories.swift; sourceTree = "<group>"; };
 		68D13EB024D3C34D0057C59B /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
-		68DE76EE24C87BCD00E95061 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		68DE76F624C8950A00E95061 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordView.swift; path = "../../../../../../../LoginView_Part_1 2/ForgotPasswordView.swift"; sourceTree = "<group>"; };
-		68DE76FE24C895E000E95061 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		68F95F9124C8A09100C75DF1 /* SignInWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailView.swift; sourceTree = "<group>"; };
-		68F95F9424C8A3C100C75DF1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
-		68F95F9624C8A3CE00C75DF1 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		68F95F9A24C8B98400C75DF1 /* MidStateClothing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MidStateClothing.entitlements; sourceTree = "<group>"; };
-		68F95F9D24C8C2D600C75DF1 /* FBFireStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFireStoreError.swift; sourceTree = "<group>"; };
-		68F95F9E24C8C2D700C75DF1 /* FBFireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFireStore.swift; sourceTree = "<group>"; };
-		68F95F9F24C8C2D800C75DF1 /* FBKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBKeys.swift; sourceTree = "<group>"; };
-		68F95FA024C8C2D900C75DF1 /* FBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBUser.swift; sourceTree = "<group>"; };
-		68F95FA524C8C2FC00C75DF1 /* FBAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAuth.swift; sourceTree = "<group>"; };
-		68F95FA624C8C2FC00C75DF1 /* FBAuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAuthError.swift; sourceTree = "<group>"; };
-		68FD8B2A24CD065A00D765D1 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		68FD8B2C24CE32D700D765D1 /* SignInWithGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithGoogle.swift; sourceTree = "<group>"; };
 		A29850E40DB5B09FEBD1410B /* Pods-MidStateClothing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidStateClothing.release.xcconfig"; path = "Target Support Files/Pods-MidStateClothing/Pods-MidStateClothing.release.xcconfig"; sourceTree = "<group>"; };
 		B920FEC98C5FC3901FF05795 /* Pods_MidStateClothing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MidStateClothing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,15 +81,12 @@
 				68887C7B24D3099A00B808BF /* Logic */,
 				68887C7A24D3098500B808BF /* Views */,
 				68F95F9A24C8B98400C75DF1 /* MidStateClothing.entitlements */,
-				683DF59324C61F01009F8D71 /* Models */,
-				683DF59224C61EE2009F8D71 /* LoginStuff */,
 				683DF57B24C61595009F8D71 /* AppDelegate.swift */,
 				683DF57D24C61595009F8D71 /* SceneDelegate.swift */,
 				683DF57F24C61595009F8D71 /* ContentView.swift */,
 				683DF58124C61596009F8D71 /* Assets.xcassets */,
 				683DF58624C61596009F8D71 /* LaunchScreen.storyboard */,
 				683DF58924C61596009F8D71 /* Info.plist */,
-				68887C8024D3283B00B808BF /* GoogleService-Info.plist */,
 				683DF58324C61596009F8D71 /* Preview Content */,
 			);
 			path = MidStateClothing;
@@ -128,38 +100,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		683DF58F24C61D12009F8D71 /* Buttons */ = {
+		6843533224FAFC4700FF3970 /* StripeFunctions */ = {
 			isa = PBXGroup;
 			children = (
-				68DE76F624C8950A00E95061 /* ForgotPasswordView.swift */,
+				6843533324FAFC7F00FF3970 /* GetProductData.swift */,
 			);
-			path = Buttons;
+			path = StripeFunctions;
 			sourceTree = "<group>";
 		};
-		683DF59224C61EE2009F8D71 /* LoginStuff */ = {
+		6843533524FB025400FF3970 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				68DE76FA24C8959400E95061 /* Firebase */,
-				683DF58F24C61D12009F8D71 /* Buttons */,
-				68887C7C24D31DE200B808BF /* GoogleSignInDelegate.swift */,
-			);
-			path = LoginStuff;
-			sourceTree = "<group>";
-		};
-		683DF59324C61F01009F8D71 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				6871452124C7EA63007343E4 /* User */,
+				6843533624FB028700FF3970 /* StripeProduct.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		6871452124C7EA63007343E4 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				6871451F24C7E916007343E4 /* UserInfo.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		68887C7A24D3098500B808BF /* Views */ = {
@@ -167,6 +121,9 @@
 			children = (
 				68D13EAE24D3C3420057C59B /* MainCategories.swift */,
 				68D13EB024D3C34D0057C59B /* MainScreen.swift */,
+				6850201324F4AF82008B476B /* MenCategories.swift */,
+				6850201524F4AFB5008B476B /* WomenCategories.swift */,
+				686E1E5624F75C5700948EA5 /* ProductView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,53 +131,10 @@
 		68887C7B24D3099A00B808BF /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				6843533524FB025400FF3970 /* Models */,
+				6843533224FAFC4700FF3970 /* StripeFunctions */,
 			);
 			path = Logic;
-			sourceTree = "<group>";
-		};
-		68DE76FA24C8959400E95061 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				68DE76FD24C895AF00E95061 /* Auth */,
-				68DE76FC24C895A700E95061 /* FireStore */,
-				68DE76FB24C8959F00E95061 /* Views */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
-		68DE76FB24C8959F00E95061 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				68F95F9624C8A3CE00C75DF1 /* SignUpView.swift */,
-				68F95F9424C8A3C100C75DF1 /* ForgotPasswordView.swift */,
-				6871452224C7F477007343E4 /* LoginView.swift */,
-				68F95F9124C8A09100C75DF1 /* SignInWithEmailView.swift */,
-				68FD8B2A24CD065A00D765D1 /* SplashScreen.swift */,
-				68DE76EE24C87BCD00E95061 /* HomeView.swift */,
-				68FD8B2C24CE32D700D765D1 /* SignInWithGoogle.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		68DE76FC24C895A700E95061 /* FireStore */ = {
-			isa = PBXGroup;
-			children = (
-				68F95F9E24C8C2D700C75DF1 /* FBFireStore.swift */,
-				68F95F9D24C8C2D600C75DF1 /* FBFireStoreError.swift */,
-				68F95F9F24C8C2D800C75DF1 /* FBKeys.swift */,
-				68F95FA024C8C2D900C75DF1 /* FBUser.swift */,
-			);
-			path = FireStore;
-			sourceTree = "<group>";
-		};
-		68DE76FD24C895AF00E95061 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				68F95FA524C8C2FC00C75DF1 /* FBAuth.swift */,
-				68F95FA624C8C2FC00C75DF1 /* FBAuthError.swift */,
-				68DE76FE24C895E000E95061 /* UserViewModel.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		A6BAF2B06A8D059DD2E5660C /* Pods */ = {
@@ -252,7 +166,6 @@
 				683DF57524C61595009F8D71 /* Frameworks */,
 				683DF57624C61595009F8D71 /* Resources */,
 				DF950B9B0AFBDA9F4474D8E3 /* [CP] Embed Pods Frameworks */,
-				9597CD284C27750B6859C1E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,7 +215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				683DF58824C61596009F8D71 /* LaunchScreen.storyboard in Resources */,
-				68887C8124D3283B00B808BF /* GoogleService-Info.plist in Resources */,
 				683DF58524C61596009F8D71 /* Preview Assets.xcassets in Resources */,
 				683DF58224C61596009F8D71 /* Assets.xcassets in Resources */,
 			);
@@ -311,23 +223,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9597CD284C27750B6859C1E6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MidStateClothing/Pods-MidStateClothing-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MidStateClothing/Pods-MidStateClothing-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MidStateClothing/Pods-MidStateClothing-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9E546B18E32726921D20EB49 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,27 +269,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F95FA824C8C2FC00C75DF1 /* FBAuthError.swift in Sources */,
-				68DE76EF24C87BCD00E95061 /* HomeView.swift in Sources */,
-				68F95FA124C8C2D900C75DF1 /* FBFireStoreError.swift in Sources */,
-				68F95F9324C8A13600C75DF1 /* UserViewModel.swift in Sources */,
-				68FD8B2D24CE32D700D765D1 /* SignInWithGoogle.swift in Sources */,
-				68F95FA224C8C2D900C75DF1 /* FBFireStore.swift in Sources */,
+				6850201424F4AF82008B476B /* MenCategories.swift in Sources */,
 				68D13EB224D3C3E30057C59B /* MainCategories.swift in Sources */,
 				683DF57C24C61595009F8D71 /* AppDelegate.swift in Sources */,
+				6843533424FAFC7F00FF3970 /* GetProductData.swift in Sources */,
+				6843533724FB028700FF3970 /* StripeProduct.swift in Sources */,
 				68D13EB124D3C34D0057C59B /* MainScreen.swift in Sources */,
-				68887C7D24D31DE200B808BF /* GoogleSignInDelegate.swift in Sources */,
 				683DF57E24C61595009F8D71 /* SceneDelegate.swift in Sources */,
-				6871452024C7E916007343E4 /* UserInfo.swift in Sources */,
-				68F95F9224C8A09100C75DF1 /* SignInWithEmailView.swift in Sources */,
-				68FD8B2B24CD065A00D765D1 /* SplashScreen.swift in Sources */,
-				68F95F9724C8A3CE00C75DF1 /* SignUpView.swift in Sources */,
+				686E1E5724F75C5700948EA5 /* ProductView.swift in Sources */,
 				683DF58024C61595009F8D71 /* ContentView.swift in Sources */,
-				68F95F9524C8A3C100C75DF1 /* ForgotPasswordView.swift in Sources */,
-				6871452324C7F477007343E4 /* LoginView.swift in Sources */,
-				68F95FA724C8C2FC00C75DF1 /* FBAuth.swift in Sources */,
-				68F95FA424C8C2D900C75DF1 /* FBUser.swift in Sources */,
-				68F95FA324C8C2D900C75DF1 /* FBKeys.swift in Sources */,
+				6850201624F4AFB5008B476B /* WomenCategories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

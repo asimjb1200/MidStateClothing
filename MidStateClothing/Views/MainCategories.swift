@@ -11,39 +11,28 @@ import SwiftUI
 struct MainCategories: View {
     var category: String = ""
     var photo: String = ""
+    var width: CGFloat = 0
+    var height: CGFloat = 0
     
-    init(category: String, photo: String) {
+    init(category: String, photo: String, width: CGFloat, height: CGFloat) {
         self.category = category
         self.photo = photo
+        self.width = width
+        self.height = height
     }
     var body: some View {
-       ZStack {
-        Image(self.photo)
-                .renderingMode(.original)
-                .resizable()
-                .scaledToFit()
-                .frame(width: UIScreen.main.bounds.width, height: 200)
-        
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                Text(self.category)
-                .padding(.vertical, 15)
-                .frame(width: 200)
-                .font(.largeTitle)
-                .background(Color.white)
-                .cornerRadius(25)
-                .foregroundColor(.green)
-                .opacity(0.75)
-                .overlay(
-                        RoundedRectangle(cornerRadius: 25)
-                            .stroke(Color.green, lineWidth: 5)
-                )
-            }
+
+                Image(self.photo)
+                    .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: self.width, height: self.height)
+                        .clipped()
         }
-    }
 }
 
 struct MainCategories_Previews: PreviewProvider {
     static var previews: some View {
-        MainCategories(category: "Women", photo: "stockModel")
+        MainCategories(category: "Women", photo: "womenMerch", width: 440, height: 300)
     }
 }

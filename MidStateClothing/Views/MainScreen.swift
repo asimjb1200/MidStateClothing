@@ -9,29 +9,48 @@
 import SwiftUI
 
 struct MainScreen: View {
-    var categoryArray: [CategoryHolder] = [CategoryHolder(name: "Women", photo: "stockModel"), CategoryHolder(name: "Men", photo: "stockModel2"), CategoryHolder(name: "Accessories", photo: "accessories")]
-    // var category = CategoryHolder(name: "Women", photo: "stockModel")
-    
+//    var categoryArray: [CategoryHolder] = [CategoryHolder(name: "Women", photo: "womenMerch"), CategoryHolder(name: "Men", photo: "menMerch1"), CategoryHolder(name: "Accessories", photo: "accessories")]
     
     var body: some View {
+        GeometryReader{ geometry in
         NavigationView {
-            VStack(spacing: 10) {
-                ForEach(categoryArray, id: \.self) { category in
-                    NavigationLink(destination: ResultView(choice: category.name)) {
-                        MainCategories(category: category.name, photo: category.photo)
-                    }
+            VStack() {
+                NavigationLink(destination: WomenCategories()) {
+                    
+                        MainCategories(category: "Women", photo: "womenMerch", width: geometry.size.width, height: geometry.size.height/3)
+                    
+                }
+                NavigationLink(destination: MenCategories()) {
+                    
+                        MainCategories(category: "Men", photo: "menMerch1", width: geometry.size.width, height: geometry.size.height/3)
+                    
+                }
+                NavigationLink(destination: MenCategories()) {
+                    
+                        MainCategories(category: "Accessories", photo: "accessories4", width: geometry.size.width, height: geometry.size.height/3)
+                    
                 }
             }
-            .navigationBarTitle("Mid$tate Clothing")
+                
+            .navigationBarTitle(Text(""), displayMode: .inline)
+            .navigationBarItems(leading:
+                    HStack {
+                        Image("midstate_noBackground")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 200, height: 180,  alignment: .bottomLeading)
+//                            .padding(UIScreen.main.bounds.size.width)
+                    }
+                    ,trailing:
+                    HStack {
+                        Button(action: {
+                        }) {
+                            Image(systemName: "cart")
+                            }.foregroundColor(Color.black)
+                    }
+            )
         }
-    }
-}
-
-struct ResultView: View {
-    var choice: String
-    
-    var body: some View {
-        Text("You chose \(choice)")
+        }
     }
 }
 

@@ -8,13 +8,10 @@
 
 import UIKit
 import SwiftUI
-import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    // create instance of user when app launches
-    var userInfo = UserInfo()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -22,21 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        // Get the googleDelegate from AppDelegate
-        let googleDelegate = (UIApplication.shared.delegate as! AppDelegate).googleDelegate
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
-                            .environmentObject(userInfo)
-                            .environmentObject(googleDelegate)
+//                            .environmentObject(userInfo)
+//                            .environmentObject(googleDelegate)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: contentView)
             
-            // Set presentingViewControll to rootViewController
-            GIDSignIn.sharedInstance().presentingViewController = window.rootViewController
             
             self.window = window
             window.makeKeyAndVisible()
@@ -74,3 +67,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+
+struct SceneDelegate_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
