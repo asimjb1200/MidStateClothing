@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
-//                            .environmentObject(userInfo)
+//                            .environmentObject(singleton)
 //                            .environmentObject(googleDelegate)
 
         // Use a UIHostingController as window root view controller.

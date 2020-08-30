@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct StripeProduct: Codable {
+struct StripeProduct: Codable, Identifiable {
+    let id = UUID()
     let productID: String
     let price: Int
     let productName: String

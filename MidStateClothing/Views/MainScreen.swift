@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MainScreen: View {
-//    var categoryArray: [CategoryHolder] = [CategoryHolder(name: "Women", photo: "womenMerch"), CategoryHolder(name: "Men", photo: "menMerch1"), CategoryHolder(name: "Accessories", photo: "accessories")]
+    @State var products: [StripeProduct] = []
     
     var body: some View {
         GeometryReader{ geometry in
@@ -50,6 +50,12 @@ struct MainScreen: View {
                     }
             )
         }
+        }
+        .onAppear {
+            GetProductData.singleton.getMenItems { (products) in
+                self.products = products
+                print(self.products)
+            }
         }
     }
 }

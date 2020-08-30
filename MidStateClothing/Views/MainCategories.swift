@@ -14,6 +14,7 @@ struct MainCategories: View {
     var width: CGFloat = 0
     var height: CGFloat = 0
     
+    
     init(category: String, photo: String, width: CGFloat, height: CGFloat) {
         self.category = category
         self.photo = photo
@@ -28,7 +29,9 @@ struct MainCategories: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: self.width, height: self.height)
                         .clipped()
+        
         }
+    
 }
 
 struct MainCategories_Previews: PreviewProvider {
