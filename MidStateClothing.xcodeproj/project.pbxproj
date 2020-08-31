@@ -18,6 +18,7 @@
 		6850201424F4AF82008B476B /* MenCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850201324F4AF82008B476B /* MenCategories.swift */; };
 		6850201624F4AFB5008B476B /* WomenCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850201524F4AFB5008B476B /* WomenCategories.swift */; };
 		686E1E5724F75C5700948EA5 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E1E5624F75C5700948EA5 /* ProductView.swift */; };
+		6874AF3C24FC87D800ACBCDB /* MenProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874AF3B24FC87D800ACBCDB /* MenProducts.swift */; };
 		68D13EB124D3C34D0057C59B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13EB024D3C34D0057C59B /* MainScreen.swift */; };
 		68D13EB224D3C3E30057C59B /* MainCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13EAE24D3C3420057C59B /* MainCategories.swift */; };
 		9BED08913F287A9CC7E522B7 /* Pods_MidStateClothing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B920FEC98C5FC3901FF05795 /* Pods_MidStateClothing.framework */; };
@@ -38,6 +39,7 @@
 		6850201324F4AF82008B476B /* MenCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenCategories.swift; sourceTree = "<group>"; };
 		6850201524F4AFB5008B476B /* WomenCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomenCategories.swift; sourceTree = "<group>"; };
 		686E1E5624F75C5700948EA5 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		6874AF3B24FC87D800ACBCDB /* MenProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenProducts.swift; sourceTree = "<group>"; };
 		68D13EAE24D3C3420057C59B /* MainCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategories.swift; sourceTree = "<group>"; };
 		68D13EB024D3C34D0057C59B /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		68F95F9A24C8B98400C75DF1 /* MidStateClothing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MidStateClothing.entitlements; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				6850201324F4AF82008B476B /* MenCategories.swift */,
 				6850201524F4AFB5008B476B /* WomenCategories.swift */,
 				686E1E5624F75C5700948EA5 /* ProductView.swift */,
+				6874AF3B24FC87D800ACBCDB /* MenProducts.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				683DF57C24C61595009F8D71 /* AppDelegate.swift in Sources */,
 				6843533424FAFC7F00FF3970 /* GetProductData.swift in Sources */,
 				6843533724FB028700FF3970 /* StripeProduct.swift in Sources */,
+				6874AF3C24FC87D800ACBCDB /* MenProducts.swift in Sources */,
 				68D13EB124D3C34D0057C59B /* MainScreen.swift in Sources */,
 				683DF57E24C61595009F8D71 /* SceneDelegate.swift in Sources */,
 				686E1E5724F75C5700948EA5 /* ProductView.swift in Sources */,

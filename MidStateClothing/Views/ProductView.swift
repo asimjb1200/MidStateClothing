@@ -11,14 +11,18 @@ import SwiftUI
 struct ProductView: View {
     var productID: String = ""
     var photo: String = ""
-    var price: NSNumber = 0
+    var price: Int = 0
     var productName: String = ""
+    var height: CGFloat
+    var width: CGFloat
     
-    init(productID: String, photo: String, price: NSNumber, name: String) {
+    init(productID: String, photo: String, price: Int, name: String, height: CGFloat, width: CGFloat) {
         self.productID = productID
         self.photo = photo
         self.price = price
         self.productName = name
+        self.height = height
+        self.width = width
     }
     
     var body: some View {
@@ -33,7 +37,7 @@ struct ProductView: View {
                 }
                 Image("women_tops")
                 .resizable()
-                    .frame(width: geometry.size.width, height: geometry.size.height/2)
+                    .frame(width: self.width, height: self.height)
                 
             }
         }
@@ -42,6 +46,6 @@ struct ProductView: View {
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(productID: "test", photo: "women_tops", price: 23.50, name: "Basic MidState Tee")
+        ProductView(productID: "test", photo: "women_tops", price: Int(23.50), name: "Basic MidState Tee", height: 50, width: 25.0)
     }
 }
