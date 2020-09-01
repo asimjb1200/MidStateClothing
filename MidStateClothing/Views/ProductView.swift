@@ -26,26 +26,29 @@ struct ProductView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
+        Group {
             VStack {
                 HStack {
                     Text(self.productName)
-                        .padding()
-                        Spacer()
+                    .padding()
+                    Spacer()
                     Text("$\(self.price)")
                     .padding()
                 }
                 Image("women_tops")
-                .resizable()
-                    .frame(width: self.width, height: self.height)
-                
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: self.width, height: 300)
+                    .clipped()
             }
+        }.frame(width: self.width, height: self.height)
+        
+        
         }
-    }
 }
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(productID: "test", photo: "women_tops", price: Int(23.50), name: "Basic MidState Tee", height: 50, width: 25.0)
+        ProductView(productID: "test", photo: "women_tops", price: Int(23.50), name: "Basic MidState Tee", height: 300, width: 400.0)
     }
 }

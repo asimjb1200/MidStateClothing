@@ -10,39 +10,37 @@ import SwiftUI
 
 struct MenCategories: View {
     var body: some View {
-            GeometryReader{ geometry in
-                VStack {
+        GeometryReader{ geometry in
+            VStack {
+                NavigationLink(destination: MenProducts()) {
                     Image("men_tshirts")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geometry.size.width, height: geometry.size.height/2)
-                    
-                       
+                }
+                NavigationLink(destination: MenProducts()) {
                     Image("shorts")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geometry.size.width, height: geometry.size.height/2)
                         .clipped()
-                        
                 }
-                .navigationBarTitle(Text(""), displayMode: .inline)
-                .navigationBarItems(leading:
-                        HStack {
-
-                            Text("Men")
-                        }
-                        ,trailing:
-
-                        HStack {
-
-                            Button(action: {
-                            }) {
-                                Image(systemName: "cart")
-                                }.foregroundColor(Color.black)
-                        }
-                )
+            }
+            .navigationBarTitle(Text(""), displayMode: .inline)
+            .navigationBarItems(leading:
+                HStack {
+                    Text("Men")
+                }
+                ,trailing:
+                HStack {
+                    Button(action: {
+                    }) {
+                        Image(systemName: "cart")
+                    }.foregroundColor(Color.black)
+                }
+            )
         }
     }
 }

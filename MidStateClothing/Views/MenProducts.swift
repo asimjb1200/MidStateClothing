@@ -7,57 +7,44 @@
 //
 
 import SwiftUI
+import Combine
 
 class ProductViewModel: ObservableObject {
-    @Published var test = "Message to Display"
-//    @Published var womensProducts: [StripeProduct] = []
-    @Published var mensProducts: [StripeProduct] = []
-    let stripeKey = ""
-        
-    static let singleton = ProductViewModel()
+    // event that will give me the product view model
+    var didChange = PassthroughSubject<ProductViewModel, Never>()
     
-    private init() {
-        
+    // whenever this variable changes, publish the notify the views that use it to redraw
+    var mensProducts = [StripeProduct]() {
+        didSet {
+            didChange.send(self)
+        }
     }
     
-//    completion: @escaping ([StripeProduct]) -> ()
+    init() {
+        getMenItems()
+    }
+    
     func getMenItems() {
-//        if self.mensProducts.isEmpty {
-//
-//        }
-        // hit the URL and
-        guard let url = URL(string: "http://127.0.0.1:3000/bags") else {
-            return
+        WebService().getMenItems { products in
+            self.mensProducts = products
         }
-        
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
-            // return the data asynchronously so that the call doesn't have to complete before loading the UI
-            DispatchQueue.main.async {
-//                completion(products)
-                self.mensProducts = try! JSONDecoder().decode([StripeProduct].self, from: data!)
-            }
-        }
-    .resume()
     }
 }
 
 struct MenProducts: View {
-    @ObservedObject var productVM = ProductViewModel.singleton
+    // subscribe to this object and watch for changes in it
+    @ObservedObject var productVM = ProductViewModel()
     var body: some View {
-        GeometryReader { geomtry in
-            VStack {
-                ScrollView {
-            ForEach(self.productVM.mensProducts) { item in
-//                Text(item.productID)
-                ProductView(productID: item.productID, photo: "menMerch", price: item.price, name: item.productName, height: geomtry.size.height/4, width: geomtry.size.width)
-            }
+        GeometryReader { geometry in
+            ScrollView {
+                VStack {
+                    ForEach(self.productVM.mensProducts) { item in
+                        ProductView(productID: item.productID, photo: "menMerch", price: item.price, name: item.productName, height: geometry.size.height/2, width: geometry.size.width)
+                    }
                 }
-
             }
         }
-        .onAppear {
-            ProductViewModel.singleton.getMenItems()
-        }
+        .onAppear(perform: self.productVM.getMenItems)
     }
 }
 
