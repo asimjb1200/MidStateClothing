@@ -12,14 +12,14 @@ struct MenCategories: View {
     var body: some View {
         GeometryReader{ geometry in
             VStack {
-                NavigationLink(destination: MenProducts()) {
+                NavigationLink(destination: MenShirts()) {
                     Image("men_tshirts")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geometry.size.width, height: geometry.size.height/2)
                 }
-                NavigationLink(destination: MenProducts()) {
+                NavigationLink(destination: MenShirts()) {
                     Image("shorts")
                         .renderingMode(.original)
                         .resizable()

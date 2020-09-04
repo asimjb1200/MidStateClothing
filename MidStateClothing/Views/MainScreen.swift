@@ -27,7 +27,7 @@ struct MainScreen: View {
                     }
                     NavigationLink(destination: MenCategories()) {
                         
-                            MainCategories(category: "Accessories", photo: "accessories4", width: geometry.size.width, height: geometry.size.height/3)
+                            MainCategories(category: "Accessories", photo: "accessories", width: geometry.size.width, height: geometry.size.height/3)
                         
                     }
                 }

@@ -10,46 +10,45 @@ import SwiftUI
 import Combine
 
 class ProductViewModel: ObservableObject {
-    // event that will give me the product view model
-    var didChange = PassthroughSubject<ProductViewModel, Never>()
-    
     // whenever this variable changes, publish the notify the views that use it to redraw
-    var mensProducts = [StripeProduct]() {
-        didSet {
-            didChange.send(self)
-        }
-    }
+    @Published var mensShirts = [StripeProduct]()
     
     init() {
         getMenItems()
     }
     
-    func getMenItems() {
-        WebService().getMenItems { products in
-            self.mensProducts = products
+    private func getMenItems() {
+        // hit the URL and
+        guard let url = URL(string: "http://localhost:3000/bags") else {
+            return
         }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+                print("Reaching out to network")
+                self.mensShirts = try! JSONDecoder().decode([StripeProduct].self, from: data!)
+        }
+        .resume()
     }
 }
 
-struct MenProducts: View {
+struct MenShirts: View {
     // subscribe to this object and watch for changes in it
     @ObservedObject var productVM = ProductViewModel()
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
-                    ForEach(self.productVM.mensProducts) { item in
-                        ProductView(productID: item.productID, photo: "menMerch", price: item.price, name: item.productName, height: geometry.size.height/2, width: geometry.size.width)
+                    ForEach(self.productVM.mensShirts) { item in
+                        ProductView(product: item, height: geometry.size.height/2, width: geometry.size.width)
                     }
                 }
             }
         }
-        .onAppear(perform: self.productVM.getMenItems)
     }
 }
 
 struct MenProducts_Previews: PreviewProvider {
     static var previews: some View {
-        MenProducts()
+        MenShirts()
     }
 }

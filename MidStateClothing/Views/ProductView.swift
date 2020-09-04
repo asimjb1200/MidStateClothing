@@ -9,18 +9,13 @@
 import SwiftUI
 
 struct ProductView: View {
-    var productID: String = ""
-    var photo: String = ""
-    var price: Int = 0
-    var productName: String = ""
+    @Environment(\.imageCache) var cache: ImageCache
+    var product: StripeProduct
     var height: CGFloat
     var width: CGFloat
     
-    init(productID: String, photo: String, price: Int, name: String, height: CGFloat, width: CGFloat) {
-        self.productID = productID
-        self.photo = photo
-        self.price = price
-        self.productName = name
+    init(product: StripeProduct, height: CGFloat, width: CGFloat) {
+        self.product = product
         self.height = height
         self.width = width
     }
@@ -29,17 +24,18 @@ struct ProductView: View {
         Group {
             VStack {
                 HStack {
-                    Text(self.productName)
+                    Text(self.product.productName)
                     .padding()
                     Spacer()
-                    Text("$\(self.price)")
+                    Text("$\(self.product.price)")
                     .padding()
                 }
-                Image("women_tops")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: self.width, height: 300)
-                    .clipped()
+//                Image("women_tops")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fill)
+//                    .frame(width: self.width, height: 300)
+//                    .clipped()
+                UrlImageView(width: self.width, url: product.photoUrl, placeholder: Text("Loading..."), cache: cache).aspectRatio(contentMode: .fit)
             }
         }.frame(width: self.width, height: self.height)
         
@@ -49,6 +45,6 @@ struct ProductView: View {
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(productID: "test", photo: "women_tops", price: Int(23.50), name: "Basic MidState Tee", height: 300, width: 400.0)
+        ProductView(product: StripeProduct(productID: "test", photoUrl: "https://files.stripe.com/links/fl_test_ewgnyyjInsUfuf5T1YJCI55d", price: 20, productName: "test", productSex: "male"), height: 300, width: 400.0)
     }
 }
