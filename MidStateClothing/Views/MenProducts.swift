@@ -19,13 +19,15 @@ class ProductViewModel: ObservableObject {
     
     private func getMenItems() {
         // hit the URL and
-        guard let url = URL(string: "http://localhost:3000/bags") else {
+        guard let url = URL(string: "http://127.0.0.1:3000/bags") else {
             return
         }
-        
+
         URLSession.shared.dataTask(with: url) { (data, response, err) in
+            DispatchQueue.main.async {
                 print("Reaching out to network")
                 self.mensShirts = try! JSONDecoder().decode([StripeProduct].self, from: data!)
+            }
         }
         .resume()
     }

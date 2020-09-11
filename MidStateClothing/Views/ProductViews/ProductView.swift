@@ -30,11 +30,6 @@ struct ProductView: View {
                     Text("$\(self.product.price)")
                     .padding()
                 }
-//                Image("women_tops")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fill)
-//                    .frame(width: self.width, height: 300)
-//                    .clipped()
                 UrlImageView(width: self.width, url: product.photoUrl, placeholder: Text("Loading..."), cache: cache).aspectRatio(contentMode: .fit)
             }
         }.frame(width: self.width, height: self.height)
